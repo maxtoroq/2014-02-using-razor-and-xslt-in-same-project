@@ -1,0 +1,10 @@
+﻿<html>
+   <head>
+      @RenderSection("head", required: false)
+   </head>
+   <body>
+      <h1>Razor and XSLT</h1>
+      @RenderBody()
+      <footer>Razor version: @typeof(WebPage).Assembly.GetName().Version</footer>
+   </body>
+</html>

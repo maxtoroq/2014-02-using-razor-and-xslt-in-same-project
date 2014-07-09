@@ -1,0 +1,6 @@
+﻿@{ 
+   Html.RenderPartial("~/Views/Shared/_LayoutForRazor.xsl", (object)Model, new ViewDataDictionary(ViewData) { 
+      { "section-head", (RenderSection("head", required: false) ?? (object)"").ToString() },
+      { "section-content", RenderBody().ToString() }
+   });
+}

@@ -1,0 +1,17 @@
+﻿@{ 
+   Layout = "~/Views/Shared/_Layout.cshtml";
+   string viewName = "_" + Page.ViewName;
+}
+@section head {
+   @{
+      Html.RenderPartial(viewName, (object)Model, new ViewDataDictionary(ViewData) { 
+         { "layout-section", "head" }
+      });
+   }
+}
+@{ 
+   Html.RenderPartial(viewName, (object)Model, new ViewDataDictionary(ViewData) { 
+      { "layout-section", "content" }
+   });
+}
+@RenderBody()
